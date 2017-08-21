@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+<div class="page-header">
+    <h3>Page For JavaScript Test...</h3>
+</div>
+<div>
+    <button class="btn_group_1" id="btn_1">click me.</button>
+    <button class="btn_group_1" id="btn_2">click me.</button>
+    <button class="btn_group_1" id="btn_3">click me.</button>
+</div>
+
+<div class="page-header">
+    <h3>HTML5 Drag/Drop Api Test</h3>
+</div>
+<ul class="dragdroptest">
+    <li draggable="true">Ink Ink Ink Ink Ink</li>
+    <li draggable="true">Iah Iah Iah Iah Iah</li>
+    <li draggable="true">Yor Yor Yor Yor Yor</li>
+</ul>
+
+<div class="page-header">
+    <h3>jquery animate test</h3>
+</div>
+<table style="width:100%">
+<tr>
+    <td>
+    <button id="jquery-animate-test-button">Animate Test</button>
+    <div id="colorBlock" style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+    </td>
+    <td>
+        <div id="drophere">Drop Here</div>
+    </td>
+</tr>
+</table>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script type="text/javascript" charset="utf-8" src="{{ url_for('static', filename='js_test.js') }}"></script>
+{% endblock %}
